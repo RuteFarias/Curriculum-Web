@@ -70,6 +70,37 @@ section{
     width:100%;
     margin-right:-210px;
 }
+
+.wrapper{
+    height: 100vh;
+    overflow-x: hidden;
+    perspective: 2px;
+    transform-style: preserve-3d;
+}
+
+.section{
+    position: relative;
+    height: 100vh;
+    min-height: 700px;
+    transform-style: inherit; 
+}
+
+.section::before{
+    content: " ";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.bg1::before {
+    background-image: url('../images/Banner.png');
+  }
 .section-title{
     font-size: 40px;
     font-weight: 300;
@@ -262,7 +293,12 @@ section{
 }
 .photo img{
     height: 60vh;
-    flex: 2;
+    float:right;
+    border-radius: 100%;
+
+   
+    
+    
       
     
 }
